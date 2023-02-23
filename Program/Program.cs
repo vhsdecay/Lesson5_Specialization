@@ -24,6 +24,7 @@ string SreachElement(string [] array) // Поиск и заполнение ст
     return elementSort;
 }
 
+// Ввод строки пользователем 
 Console.Write("Введите слова или значения через пробел или запятую : ");
 string inputString = Console.ReadLine() ?? string.Empty;
 while (inputString.Length < 1)
@@ -32,9 +33,9 @@ while (inputString.Length < 1)
     inputString = Console.ReadLine() ?? string.Empty;
 
 }
+// #
 
-string[] elementSplit = SplitElments(SreachElement(SplitElments(inputString)));
-
+string[] elementSplit = SplitElments(SreachElement(SplitElments(inputString))); // Отсортированный массив  
 
 // Вывод требуемых элементов 
 Console.Write("Элементы которые соблюдают условия -> [");
@@ -54,3 +55,4 @@ else
             Console.Write($"{elementSplit[i]}]");
     }
 }
+// #
