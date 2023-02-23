@@ -23,3 +23,14 @@ string SreachElement(string [] array) // Поиск и заполнение ст
     }
     return elementSort;
 }
+
+Console.Write("Введите слова или значения через пробел или запятую : ");
+string inputString = Console.ReadLine() ?? string.Empty;
+while (inputString.Length < 1)
+{
+    Console.Write("Пустая строка, повторите ввод : ");
+    inputString = Console.ReadLine() ?? string.Empty;
+
+}
+
+string[] elementSplit = SplitElments(SreachElement(SplitElments(inputString)));
