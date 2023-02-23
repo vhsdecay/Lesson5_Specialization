@@ -34,3 +34,23 @@ while (inputString.Length < 1)
 }
 
 string[] elementSplit = SplitElments(SreachElement(SplitElments(inputString)));
+
+
+// Вывод требуемых элементов 
+Console.Write("Элементы которые соблюдают условия -> [");
+if (elementSplit.Length == 0)
+{
+    Console.Write("отсутствуют]");
+}
+else
+{
+    for (int i = 0; i < elementSplit.Length; i++)
+    {
+        if (i < elementSplit.Length - 1)
+        {
+            Console.Write($"{elementSplit[i]}, ");
+        }
+        else
+            Console.Write($"{elementSplit[i]}]");
+    }
+}
